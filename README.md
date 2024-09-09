@@ -1,13 +1,19 @@
 # localstack
 
+Desenvolvendo aplicações AWS localmente.
+
 ## Pré Requisitos
 
-- [ ] Docker
+Iremos fazer a instalação e configuração utilizando o docker-compose.
+
+- [ ] Docker Compose
 - [ ] AWS Cli
 
 ## Setup
 
 ### Docker
+
+Crie uma pasta de sua preferência, pode ser a própria localstack e um arquivo chamado: `docker-compose.yaml` na pasta localstack criada.
 
 ```yaml
 version: "3.8"
@@ -26,6 +32,8 @@ services:
       - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
 ```
+
+Após a criação e adição do conteúdo, execute o comando no terminal:
 
 > docker-compose up -d
 
